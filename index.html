@@ -15,17 +15,18 @@
 </head>
 <body>
     <!-- Div principal -->
-    <form action="">
+    <div class="row g-3 p-3">
     <!-- Título-->
-        <div class="card-header">
+        <div class="card-header text-center d-flex flex-columnn">
             <h2>Payment form example</h2>
         </div>
     <!-- Nº de tarjeta -->
-            <div class="col- col-sm- col-md d-flex justify-content-around">
-                <div class="creditCard">Card#
+        <div class="flex-grow-1">
+            <div class="col- col-sm- col-md d-flex gap-2 p-2 flex-grow-1 ">
+                <div class="creditCard " >Card#
                     <input class="form-control" type="number" placeholder="XXXXXXXXXXXXXXXXXX" aria-label="default input example">
                 </div>
-                <div class="cvc">CVC#
+                <div class="cvc ">CVC#
                     <input class="form-control" type="number" placeholder="000" aria-label="default input example">
                 </div>
                 <div class="amount">Amount
@@ -33,55 +34,58 @@
                 </div>
             </div>    
 <!-- FirstName, city we accept -->
-                <div class="d-flex flex-column bd-highlight mb-3 col- col-sm- col-md d-flex justify-content-around">
+            <div class="d-flex">
+                <div class="d-flex flex-column bd-highlight mb-3 col- col-sm- col-md d-flex ">
                     <div class="p-2 bd-highlight">First Name
                         <input class="form-control" type="text" placeholder="" aria-label="default input example" >
                     </div>
                     <div class="p-2 bd-highlight">City
                         <input class="form-control" type="text" placeholder="" aria-label="default input example" >
                     </div>
-                    <div class="p-2 bd-highlight">We Accept:
-                        <div class="form-check form-check-block">
-                            <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label  fa-brands fa-cc-mastercard" for="inlineRadio1"></label>
+                    <fieldset class="p-2 bd-highlight justify-content">We Accept:
+                        <div class="d-flex">
+                            <div class="form-check form-check-block">
+                                <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label  fa-brands fa-cc-mastercard" for="inlineRadio1"></label>
+                            </div>
+                            <div class="form-check form-check-block">
+                                <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label fa-brands fa-cc-visa" for="inlineRadio2"></label>
+                            </div>
+                            <div class="form-check form-check-block">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label fa-brands fa-cc-amazon-pay" for="inlineRadio3"></label>
+                            </div>   
                         </div>
-                        <div class="form-check form-check-block">
-                            <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label fa-brands fa-cc-visa" for="inlineRadio2"></label>
-                        </div>
-                        <div class="form-check form-check-block">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                            <label class="form-check-label fa-brands fa-cc-amazon-pay" for="inlineRadio3"></label>
-                        </div>   
-
                         <!-- <label><input class="fa-brands fa-cc-visa" type="radio"></label>
                         <label><input class="fa-brands fa-cc-mastercard" type="radio"></label>
                         <label><input class="fa-brands fa-cc-diners-club" type="radio"></label>
                         <label><input class="fa-brands fa-cc-amazon-pay" type="radio"></label> -->
-                    </div>
+                    </fieldset>
                 </div>
 <!-- LastName,State,Code,message -->
-<div class="d-flex flex-column bd-highlight mb-3 col- col-sm- col-md d-flex justify-content-around">
-    <div class="p-2 bd-highlight">Last Name
-        <input class="form-control" type="text" placeholder="" aria-label="default input example" >
-    </div>
-    <div class="p-2 bd-highlight">State
-        <input class="form-control" type="text" placeholder="" aria-label="default input example" >
-    </div>
-    <div class="p-2 bd-highlight">Postal Code
-        <input class="form-control" type="text" placeholder="" aria-label="default input example" >
-    </div>
-    <div class="p-2 bd-highlight">Message
-        <input class="form-control" type="text" placeholder="" aria-label="default input example" >
-    </div>
-</div>
+                <div class="d-flex flex-column bd-highlight mb-3 col- col-sm- col-md d-flex">
+                    <div class="p-2 bd-highlight">Last Name
+                         <input class="form-control" type="text" placeholder="" aria-label="default input example" >
+                </div>
+                <div class="p-2 bd-highlight">State
+                    <input class="form-control" type="text" placeholder="" aria-label="default input example" >
+                </div>
+                <div class="p-2 bd-highlight">Postal Code
+                    <input class="form-control" type="text" placeholder="" aria-label="default input example" >
+                </div>
+                <div class="p-2 bd-highlight">Message
+                    <input class="form-control" type="text" placeholder="" aria-label="default input example" >
+                </div>
+            </div>
+        </div>    
  <!-- end -->
-        <div class="card-footer">
+        <div class="card-footer mt-auto p-3" >
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-second me-md-2" type="button">Cancel</button>
                 <button class="btn btn-primary" type="button">Send</button>
-              </div>
+            </div>
         </div>
-    </form>
+    </div>
 </body>
 </html>
