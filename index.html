@@ -15,62 +15,71 @@
 </head>
 <body>
     <!-- Div principal -->
-    <div class="row g-3 p-3">
+         <div class="row g-3 p-3"> 
     <!-- Título-->
-        <div class="card-header text-center d-flex flex-columnn">
+        <div class="card-header text-center d-flex flex-columnn mb-4">
             <h2>Payment form example</h2>
         </div>
     <!--Alerta -->
         <div  class="alert alert-warning d-flex align-items-center d-none" role="alert">
-            <i class="bi bi-exclamation-triangle-fill me-2"></i>Some fields are missing
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            <div>Some fields are missing</div>
         </div>
-    </div>    
+    </div> 
     <!-- Nº de tarjeta -->
-     <form action="">
-        <div class="flex-grow-1">
-            <div class="col- col-sm- col-md d-flex gap-2 p-2 flex-grow-1 ">
-                <div class="creditCard " >Card#
-                    <input class="form-control" type="number" placeholder="XXXXXXXXXXXXXXXXXX" aria-label="default input example">
+     <form action="" class="bg-white p-4 rounded shadow-sm">
+            <div class="row g-3 mb-4">
+                <div class="col-12 col-md-4">
+                    <label class="form-label">Card #</label>
+                    <input type="number" inputmode="numeric" class="form-control" placeholder="XXXXXXXXXXXXXXXXXX" required>
                 </div>
-                <div class="cvc ">CVC#
-                    <input class="form-control" type="number" placeholder="000" aria-label="default input example">
+                <div class="col-12 col-md-4">
+                    <label class="form-label">CVC #</label>
+                    <input type="number" inputmode="numeric" class="form-control" placeholder="000" required>
                 </div>
-                <div class="amount">Amount
-                    <input class="form-control" type="number" placeholder="" aria-label="default input example" >
+                <div class="col-12 col-md-4">
+                    <label class="form-label">Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" inputmode="numeric" class="form-control" required>
+                    </div>
                 </div>
-            </div>    
+            </div>
 <!-- FirstName, city we accept -->
-            <div class="d-flex">
-                <div class="d-flex flex-column bd-highlight mb-3 col- col-sm- col-md d-flex ">
-                    <div class="p-2 bd-highlight">First Name
-                        <input class="form-control" type="text" placeholder="" aria-label="default input example" >
-                    </div>
-                    <div class="p-2 bd-highlight">City
-                        <input class="form-control" type="text" placeholder="" aria-label="default input example" >
-                    </div>
-                    <fieldset class="p-2 bd-highlight justify-content">We Accept:
-                        <div class="d-flex">
-                            <div class="form-check form-check-block">
-                                <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label  fa-brands fa-cc-mastercard" for="inlineRadio1"></label>
-                            </div>
-                            <div class="form-check form-check-block">
-                                <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label fa-brands fa-cc-visa" for="inlineRadio2"></label>
-                            </div>
-                            <div class="form-check form-check-block">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                <label class="form-check-label fa-brands fa-cc-amazon-pay" for="inlineRadio3"></label>
-                            </div>   
-                        </div>
-                        <!-- <label><input class="fa-brands fa-cc-visa" type="radio"></label>
-                        <label><input class="fa-brands fa-cc-mastercard" type="radio"></label>
-                        <label><input class="fa-brands fa-cc-diners-club" type="radio"></label>
-                        <label><input class="fa-brands fa-cc-amazon-pay" type="radio"></label> -->
-                    </fieldset>
+<div class="row g-3">
+    <!-- Columna izquierda -->
+    <div class="col-12 col-md-6">
+        <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" required>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">City</label>
+            <input type="text" class="form-control" required>
+        </div>
+        
+        <fieldset class="mb-3">
+            <legend class="form-label">We Accept:</legend>
+            <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" required>
+                    <label class="form-check-label" for="mastercard"><i class="fa-brands fa-cc-mastercard fa-lg"></i></label>
                 </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="visa">
+                    <label class="form-check-label" for="visa"><i class="fa-brands fa-cc-visa fa-lg"></i></label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="amazon">
+                    <label class="form-check-label" for="amazon"><i class="fa-brands fa-cc-amazon-pay fa-lg"></i></label>
+                </div>
+            </div>
+        </fieldset>
+    </div> 
+                    
 <!-- LastName,State,Code,message -->
-                <div class="d-flex flex-column bd-highlight mb-3 col- col-sm- col-md d-flex">
+                 <div class="d-flex flex-column bd-highlight mb-3 col- col-sm- col-md d-flex">
                     <div class="p-2 bd-highlight">Last Name
                          <input class="form-control" type="text" placeholder="" aria-label="default input example" >
                 </div>
